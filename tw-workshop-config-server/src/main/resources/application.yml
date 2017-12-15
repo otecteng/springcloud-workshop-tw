@@ -1,6 +1,11 @@
 server:
   port: 8080
 
+management:
+  context-path: /system
+  security:
+    enabled: false
+
 spring:
   cloud:
     config:
