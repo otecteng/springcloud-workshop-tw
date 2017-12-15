@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/otecteng/springcloud-workshop.git
+          searchPaths: '/config-data/{user}/{application}/{profile}'
