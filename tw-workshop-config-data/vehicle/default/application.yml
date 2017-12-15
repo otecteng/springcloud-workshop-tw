@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:mysql://aws:3306/workshop_order"
+    url: "jdbc:mysql://aws:3306/workshop_vehicle"
     username: "root"
     password: "123456"
 
