@@ -7,4 +7,4 @@ spring:
       server:
         git:
           uri: https://github.com/otecteng/springcloud-workshop-tw.git
-          searchPaths: '/tw-workshop-config-data/{label}/{application}/{profile}'
+          searchPaths: '/tw-workshop-config-data/{application}/{profile}'
