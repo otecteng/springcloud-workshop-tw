@@ -47,5 +47,6 @@ public class Vehicle {
     }
 
     private Date created_at;
+    public String shopId;
 
 }

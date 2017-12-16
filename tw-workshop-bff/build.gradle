@@ -1,29 +1,43 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.9.RELEASE'
+		springBootVersion = '1.5.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//		classpath "io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE"
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+jar {
+	baseName = 'bff'
+	version = ''
+}
 sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
 }
 
+ext {
+	springCloudVersion = 'Dalston.SR4'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.SR4"
+	}
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

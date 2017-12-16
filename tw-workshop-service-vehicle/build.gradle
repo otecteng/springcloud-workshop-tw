@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.9.RELEASE'
+		springBootVersion = '1.5.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -14,8 +14,10 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+jar {
+	baseName = 'vehicle'
+	version = ''
+}
 sourceCompatibility = 1.8
 
 repositories {
@@ -23,14 +25,15 @@ repositories {
 }
 
 ext {
-	springCloudVersion = 'Camden.SR6'
+	springCloudVersion = 'Dalston.SR4'
 }
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-starter-parent:${springCloudVersion}"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
 	compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -41,6 +44,7 @@ dependencies {
 	compile('mysql:mysql-connector-java:5.1.36')
 	compile('org.springframework.cloud:spring-cloud-starter-config')
 	compile('org.springframework.cloud:spring-cloud-starter-sleuth')
+	compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
 	testCompile("org.springframework.boot:spring-boot-starter-test")
 	testRuntime("com.h2database:h2")
 }
