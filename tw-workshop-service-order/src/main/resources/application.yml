@@ -1,2 +1,15 @@
 server:
   port: 9002
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 50
+    max-wait: 1000
+    min-idle: 10
+    name: workshop_order
+    password: 123456
+    test-on-borrow: true
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://127.0.0.1:3306/workshop_order
+    username: root
