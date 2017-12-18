@@ -10,11 +10,11 @@ endpoints:
     sensitive: false
 
 zuul:
-  sensitiveHeaders:
+  sensitiveHeaders: zuul-token
   routes:
     stores:
       path: /shops/**
-      url: http://localhost:9000/api/v1/shops/**
+      url: http://localhost:9000/api/v1/shops/
 
 server:
   port: 8765
