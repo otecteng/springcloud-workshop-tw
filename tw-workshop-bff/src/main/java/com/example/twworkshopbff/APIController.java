@@ -27,7 +27,7 @@ public class APIController {
         ret.id = id;
         ret.name = "taobao";
         ret.orders = orderClient.list(id);
-        ret.vehicles = vehicleClient.list(id);
+//        ret.vehicles = vehicleClient.list(id);
         return ret;
     }
 }
