@@ -12,3 +12,6 @@ spring:
     type: org.apache.tomcat.jdbc.pool.DataSource
     url: jdbc:mysql://127.0.0.1:3306/workshop_vehicle
     username: root
+
+  zipkin:
+    base-url: http://localhost:9411

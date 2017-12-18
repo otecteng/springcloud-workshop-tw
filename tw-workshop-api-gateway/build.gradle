@@ -31,7 +31,8 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-config')
 //	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 //	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-	compile('org.springframework.cloud:spring-cloud-starter-zuul')
+	compile('org.sprigframework.cloud:spring-cloud-starter-sleuth')
+	compile('org.springframework.cloud:spring-cloud-sleuth-zipkin')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
