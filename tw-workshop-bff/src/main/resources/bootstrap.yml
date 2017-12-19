@@ -14,10 +14,10 @@ spring:
       ribbon:
         enabled: true
       discovery:
-        default-query-tag: ${SERVICE_TAG}
-#        tags: ${SERVICE_TAG}
+#        default-query-tag: ${SERVICE_TAG}
+        tags: ${SERVICE_TAG}
         enabled: true
-        register: false
+        register: true
         preferIpAddress: true
         instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
         heartbeat:
