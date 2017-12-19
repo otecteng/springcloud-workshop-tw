@@ -22,7 +22,7 @@ public class APIController {
 
     @GetMapping("/api/v1/shops/{id}")
     public Shop get(@PathVariable String id, @RequestHeader HttpHeaders headers) {
-        logger.info("header:{}" , headers.get("zuul-token"));
+        logger.info("header: {}" , headers.get("zuul-token"));
         Shop ret = new Shop();
         ret.id = id;
         ret.name = "taobao";
