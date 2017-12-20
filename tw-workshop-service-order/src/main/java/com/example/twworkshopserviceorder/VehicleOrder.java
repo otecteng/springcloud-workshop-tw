@@ -1,7 +1,6 @@
 package com.example.twworkshopserviceorder;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
 
@@ -19,6 +18,8 @@ public class VehicleOrder {
     public String vehicle;
     public int price;
     public Date createdAt;
-    public String shopId;
 
+    @ManyToOne
+    @JoinColumn
+    public Shop shop;
 }

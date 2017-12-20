@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestHeader;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 @RestController
 public class APIController {
 
@@ -27,7 +31,9 @@ public class APIController {
         ret.id = id;
         ret.name = "taobao";
         ret.orders = orderClient.list(id);
-//        ret.vehicles = vehicleClient.list(id);
+        ret.vehicles = vehicleClient.list(id);
         return ret;
     }
+
+
 }

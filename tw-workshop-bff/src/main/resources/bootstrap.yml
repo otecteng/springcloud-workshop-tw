@@ -25,5 +25,5 @@ spring:
           ttlValue: 10
       config:
         enabled: false
-  zipkin:
-    base-url: http://localhost:9411
+#  zipkin:
+#    base-url: http://localhost:9411
