@@ -20,6 +20,6 @@ public class VehicleOrder {
     public Date createdAt;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(referencedColumnName = "code")
     public Shop shop;
 }
